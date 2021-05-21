@@ -7,8 +7,9 @@ public class Iteracoes {
     public static void main(String[] args) {
     String[] nomes = {"Joao","Joao" ,"Paulo","Oliveira","Santos","Instrutor","Java"};
     Integer[] numeros = {1,2,3,4,5};
-    imprimirNomesFiltrados(nomes);
-    imprimirTodosNomes(nomes);
+    //imprimirNomesFiltrados(nomes);
+    //imprimirTodosNomes(nomes);
+    imprimirODobroDeCadaItemDaLista(numeros);
     }
 
     public static void imprimirNomesFiltrados(String... nomes){
@@ -37,10 +38,14 @@ public class Iteracoes {
                 .forEach(nome -> System.out.println("Imprimido pelo forEach: " +nome)); // Ou assim ->  System.out::println
     }
 
-    public void imprimirODobroDeCadaItemDaLista(Integer... numeros){
+    public static void imprimirODobroDeCadaItemDaLista(Integer... numeros){ // os tres pontos significa um array mesmo coisa que Integer[]
         for(Integer numero : numeros){
             System.out.println(numero*2);
         }
+
+        Stream.of(numeros)
+                .map(numero -> numero*2)
+                .forEach(System.out::println);
     }
     }
 
