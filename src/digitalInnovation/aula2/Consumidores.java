@@ -9,7 +9,7 @@ public class Consumidores {
 //      - Utilizar o parametro de forma que ele foi recebido
 
         Consumer<String> imprimirUmaFrase = System.out::println;
-       // Consumer<String> imprimirUmaFrase2 = frase -> System.out.println(frase);
+        Consumer<String> imprimirUmaFrase2 = frase -> System.out.println(frase);
         imprimirUmaFrase.accept("Hello Word");
     }
 }

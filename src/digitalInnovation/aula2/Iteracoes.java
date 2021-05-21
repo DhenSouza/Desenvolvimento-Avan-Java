@@ -30,8 +30,11 @@ public class Iteracoes {
 
     public static void imprimirTodosNomes(String... nomes) {
         for (String nome : nomes) {
-            System.out.println(nome);
+            System.out.println("imprimido pelo FOR: "+nome);
         }
+
+                Stream.of(nomes)
+                .forEach(nome -> System.out.println("Imprimido pelo forEach: " +nome)); // Ou assim ->  System.out::println
     }
 
     public void imprimirODobroDeCadaItemDaLista(Integer... numeros){
