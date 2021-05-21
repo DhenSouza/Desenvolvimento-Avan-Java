@@ -1,5 +1,7 @@
 package digitalInnovation.aula2;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -9,7 +11,19 @@ public class Iteracoes {
     Integer[] numeros = {1,2,3,4,5};
     //imprimirNomesFiltrados(nomes);
     //imprimirTodosNomes(nomes);
-    imprimirODobroDeCadaItemDaLista(numeros);
+    //imprimirODobroDeCadaItemDaLista(numeros);
+
+    List<String> profissoes = new ArrayList<>();
+
+        profissoes.add("Desenvolvedor");
+        profissoes.add("Testador");
+        profissoes.add("Gerente de Projeto");
+        profissoes.add("Gerente de Qualidade");
+
+
+        profissoes.stream()
+        .filter(profissao -> profissao.startsWith("Gerente"))
+        .forEach(System.out::println);
     }
 
     public static void imprimirNomesFiltrados(String... nomes){
